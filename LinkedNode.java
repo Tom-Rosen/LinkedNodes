@@ -1,4 +1,6 @@
-// DO NOT SUBMIT THIS SOURCE FILE TO GRADESCOPE
+// Name: Tom Rosen
+// Email: trrosen @wisc.edu 
+
 /**
  * LinkedNode class represents a generic class of a node in a linked list
  * 
