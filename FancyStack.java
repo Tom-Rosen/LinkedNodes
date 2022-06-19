@@ -1,8 +1,5 @@
-///////////////////////// CUMULATIVE QUIZ FILE HEADER //////////////////////////
-// Full Name: Tom Rosen
-// Campus ID: 908 190 4204
-// WiscEmail: trrosen@wisc.edu
-////////////////////////////////////////////////////////////////////////////////
+// Name: Tom Rosen
+// Email: trrosen @wisc.edu 
 
 import java.util.EmptyStackException;
 
@@ -10,13 +7,6 @@ import java.util.EmptyStackException;
  * A FancyStack is a linked list based stack of strings. It includes a dummy node at the top of the
  * stack. This stack may contain duplicate strings, except for the string at the top of the stack
  * (at the dummy node) which must be a unique.
- * 
- * Note that the dummy node is used to reduce the need for special-case code in this linked stack.
- * This stack is empty if it contains the dummy node only. The dummy node whose data is "TOP" will
- * be always at the top of the stack, meaning at index 0.
- * 
- * Complete the missing implementation marked by the //TODO tags.
- *
  */
 public class FancyStack {
   private LinkedNode<String> top; // top of this stack
@@ -35,8 +25,6 @@ public class FancyStack {
    * @return true when this stack is empty, and false otherwise.
    */
   public boolean isEmpty() {
-    // This stack is empty if it contains one node (the dummy node ONLY)
-    // TODO complete the implementation of this method
 	  if(top.getNext() == null)
 	  {
 		  return true;
@@ -52,7 +40,6 @@ public class FancyStack {
    * @throws IllegalArgumentException if the value to be added is null or equals "TOP"
    */
   public void push(String value) {
-    // TODO complete the implementation of this method
 	  if(value == null || value.equals("TOP"))
 	  {
 		  throw new IllegalArgumentException("Value is jank");
@@ -77,7 +64,6 @@ public class FancyStack {
    *                             stack
    */
   public String peek() {
-    // TODO complete the implementation of this method
 	  if(isEmpty())
 	  {
 		  throw new EmptyStackException();
@@ -141,8 +127,6 @@ public class FancyStack {
     	System.out.println("E2");
     	return false;
     }
-    // TODO try to call peek() on the empty stack and check whether an EmptyStackException is
-    // thrown as expected
     try
     {
         fs.peek();
@@ -157,9 +141,6 @@ public class FancyStack {
     	return false;
     }
 
-    // TODO try to push at least three VALID different strings, and check the correctness of
-    // push(), peek(), and isEmpty(). You can use the toString() method to check the contents of
-    // the stack
     fs.push("Banana");
     if(fs.isEmpty())
     {
@@ -209,7 +190,7 @@ public class FancyStack {
     	return false;
     }
 
-    return true; // CHANGE this (added to avoid compile errors)
+    return true; 
   }
 
 
